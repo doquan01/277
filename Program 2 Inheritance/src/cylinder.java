@@ -12,9 +12,4 @@ public class cylinder extends Luggage {
     public String toString(){
         return "Cylinder, Volume: " + getVolume() + ", Radius: " + radius + ", Length: " + length;
     }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

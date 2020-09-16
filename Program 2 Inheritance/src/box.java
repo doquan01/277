@@ -15,9 +15,4 @@ public class box extends Luggage{
     public String toString(){
         return "Box, Volume: " + getVolume() + ", Length: " + length + ", Width: " + width + ", Height: " + height;
     }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

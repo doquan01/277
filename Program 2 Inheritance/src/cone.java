@@ -7,14 +7,9 @@ public class cone extends Luggage {
         this.height = height;
     }
     public float getVolume(){
-        return (float)((Math.PI * (radius * radius) * height)/3);
+        return (float)(Math.round(((Math.PI * (radius * radius) * height)/3)* 100.0)/100.0);
     }
-    public String toString(){
+    public String toString() {
         return "Cone, Volume: " + getVolume() + ", Radius: " + radius + ", Height: " + height;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }

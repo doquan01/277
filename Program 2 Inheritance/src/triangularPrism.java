@@ -9,14 +9,9 @@ public class triangularPrism extends Luggage {
         this.length = length;
     }
     public float getVolume(){
-        return (float)(((width * height) / 2) * length);
+        return (float)(Math.round(((((width * height) / 2) * length) * 100.0))/100.0);
     }
     public String toString(){
         return "Triangular Prism, Volume: " + getVolume() + ", Width: " + width + ", Height: " + height + ", Length: " + length;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }

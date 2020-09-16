@@ -5,14 +5,9 @@ public class sphere extends Luggage {
         this.radius = radius;
     }
     public float getVolume(){
-        return (float)((4/3) * Math.PI * (radius * radius * radius));
+        return (float)(Math.round(((4/3) * Math.PI * (radius * radius * radius))*100.0)/100.0);
     }
     public String toString(){
         return "Sphere, Volume: " + getVolume() + ", Radius: " + radius;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }

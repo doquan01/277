@@ -10,9 +10,4 @@ public class cube extends Luggage {
     public String toString(){
         return "Cube, Volume: " + getVolume() + ", Width: " + width;
     }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

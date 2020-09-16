@@ -7,14 +7,9 @@ public class pyramid extends Luggage {
         this.height = height;
     }
     public float getVolume(){
-        return (float)((base * base * height) / 3);
+        return (float)(Math.round(((base * base * height) / 3)*100.0)/100.0);
     }
     public String toString(){
         return "Pyramid, Volume: " + getVolume() + ", Base Length: " + base + ", Height: " + height;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
     }
 }
