@@ -34,6 +34,7 @@ public class Inheritance {
         }
         while(input != 5);
     }
+
     public static int menu(){
         Scanner scan = new Scanner(System.in);
 
