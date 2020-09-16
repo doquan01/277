@@ -8,6 +8,11 @@ public class sphere extends Luggage {
         return (float)((4/3) * Math.PI * (radius * radius * radius));
     }
     public String toString(){
-        return "";
+        return "Sphere, Volume: " + getVolume() + ", Radius: " + radius;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

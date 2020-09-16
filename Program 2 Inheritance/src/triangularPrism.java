@@ -12,6 +12,11 @@ public class triangularPrism extends Luggage {
         return (float)(((width * height) / 2) * length);
     }
     public String toString(){
-        return "";
+        return "Triangular Prism, Volume: " + getVolume() + ", Width: " + width + ", Height: " + height + ", Length: " + length;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

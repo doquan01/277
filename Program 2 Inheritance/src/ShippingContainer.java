@@ -20,7 +20,7 @@ public class ShippingContainer {
     public void sortArray() {
         for (int i = 0; i < container.size(); i++) {
             for (int j = container.size() - 1; j > i; j--) {
-                if (container.get(i).compareTo(container.get(j))) {
+                if (container.get(i).compareTo(container.get(j)) == 1) {
                     Luggage temp = container.get(i);
                     container.set(i,container.get(j));
                     container.set(j, temp);

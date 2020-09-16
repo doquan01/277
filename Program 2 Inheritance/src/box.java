@@ -13,6 +13,11 @@ public class box extends Luggage{
         return (float)((length * width * height));
     }
     public String toString(){
-        return "";
+        return "Box, Volume: " + getVolume() + ", Length: " + length + ", Width: " + width + ", Height: " + height;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

@@ -10,6 +10,11 @@ public class cylinder extends Luggage {
         return (float)(Math.PI * (radius * radius) * length);
     }
     public String toString(){
-        return "";
+        return "Cylinder, Volume: " + getVolume() + ", Radius: " + radius + ", Length: " + length;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

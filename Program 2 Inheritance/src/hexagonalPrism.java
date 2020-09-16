@@ -10,6 +10,11 @@ public class hexagonalPrism extends Luggage{
         return (float)((((3 * Math.sqrt(3))/2) * (edge * edge) * height));
     }
     public String toString(){
-        return "";
+        return "Hexagonal Prism, Volume: " + getVolume() + ", Edge: " + edge + ", Height: " + height;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

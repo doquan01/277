@@ -10,6 +10,11 @@ public class cone extends Luggage {
         return (float)((Math.PI * (radius * radius) * height)/3);
     }
     public String toString(){
-        return "";
+        return "Cone, Volume: " + getVolume() + ", Radius: " + radius + ", Height: " + height;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

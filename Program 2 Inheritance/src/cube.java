@@ -8,6 +8,11 @@ public class cube extends Luggage {
         return (float)(width * width * width);
     }
     public String toString(){
-        return "";
+        return "Cube, Volume: " + getVolume() + ", Width: " + width;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

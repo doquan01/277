@@ -10,6 +10,11 @@ public class pyramid extends Luggage {
         return (float)((base * base * height) / 3);
     }
     public String toString(){
-        return "";
+        return "Pyramid, Volume: " + getVolume() + ", Base Length: " + base + ", Height: " + height;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

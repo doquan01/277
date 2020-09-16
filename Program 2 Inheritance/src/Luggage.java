@@ -1,4 +1,4 @@
-abstract class Luggage{
+abstract class Luggage implements Comparable{
     float volume;
     String type;
 
@@ -6,10 +6,18 @@ abstract class Luggage{
         this.volume = volume;
         this.type = type;
     }
-    public String toString(){
-        return "Luggage type: " + type + ", Volume: " + volume;
-    }
-    public boolean compareTo(Luggage lug){
-        return this.volume > lug.volume;
+//    public String toString(){
+//        return "Luggage type: " + type + ", Volume: " + volume;
+//    }
+    public int compareTo(Luggage lug){
+        if(this.volume > lug.volume){
+            return 1;
+        }
+        else if(this.volume < lug.volume){
+            return -1;
+        }
+        else{
+            return 0;
+        }
     }
 }
