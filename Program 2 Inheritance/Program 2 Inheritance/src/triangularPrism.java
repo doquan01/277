@@ -1,8 +1,14 @@
 public class triangularPrism extends Luggage {
-    public triangularPrism(double width, double height, double length){
+    private int width;
+    private int height;
+    private int length;
+    public triangularPrism(int width, int height, int length){
         super((float)(((width * height) / 2) * length),"triangular prism");
+        this.width = width;
+        this.height = height;
+        this.length = length;
     }
     public String toString(){
-        return "";
+        return "Triangular Prism, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Width: " + width + ", Height: " + height + ", Length: " + length;
     }
 }

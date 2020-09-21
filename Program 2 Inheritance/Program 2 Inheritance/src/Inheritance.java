@@ -17,10 +17,16 @@ public class Inheritance {
                 storage.add(x);
             }
             else if(input == 3){
-                storage.display();
-                System.out.println("Which luggage would you want to remove?");
-                int x = scan.nextInt();
-                storage.remove(x);
+                if(storage.size() == 0){
+                    storage.display();
+                    System.out.println("There are no more luggage items.\n");
+                }
+                else{
+                    storage.display();
+                    System.out.println("Which luggage would you want to remove?");
+                    int x = scan.nextInt();
+                    storage.remove(x);
+                }
             }
             else if(input == 4){
                 storage.display();
@@ -34,7 +40,7 @@ public class Inheritance {
         }
         while(input != 5);
     }
-    
+
     public static int menu(){
         Scanner scan = new Scanner(System.in);
 
