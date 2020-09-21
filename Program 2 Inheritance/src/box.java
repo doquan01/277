@@ -9,10 +9,7 @@ public class box extends Luggage{
         this.width = width;
         this.height = height;
     }
-    public float getVolume(){
-        return (float)((length * width * height));
-    }
     public String toString(){
-        return "Box, Volume: " + getVolume() + ", Length: " + length + ", Width: " + width + ", Height: " + height;
+        return "Box, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Length: " + length + ", Width: " + width + ", Height: " + height;
     }
 }

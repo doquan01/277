@@ -6,10 +6,7 @@ public class cylinder extends Luggage {
         this.radius = radius;
         this.length = length;
     }
-    public float getVolume(){
-        return (float)(Math.round((Math.PI * (radius * radius) * length) * 100.0)/100.0);
-    }
     public String toString(){
-        return "Cylinder, Volume: " + getVolume() + ", Radius: " + radius + ", Length: " + length;
+        return "Cylinder, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Radius: " + radius + ", Length: " + length;
     }
 }

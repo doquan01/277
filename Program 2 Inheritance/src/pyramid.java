@@ -6,10 +6,7 @@ public class pyramid extends Luggage {
         this.base = base;
         this.height = height;
     }
-    public float getVolume(){
-        return (float)(Math.round(((base * base * height) / 3)*100.0)/100.0);
-    }
     public String toString(){
-        return "Pyramid, Volume: " + getVolume() + ", Base Length: " + base + ", Height: " + height;
+        return "Pyramid, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Base Length: " + base + ", Height: " + height;
     }
 }

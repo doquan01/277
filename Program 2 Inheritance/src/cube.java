@@ -4,10 +4,7 @@ public class cube extends Luggage {
         super((float)(width * width * width),"cube");
         this.width = width;
     }
-    public float getVolume(){
-        return (float)(width * width * width);
-    }
     public String toString(){
-        return "Cube, Volume: " + getVolume() + ", Width: " + width;
+        return "Cube, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Width: " + width;
     }
 }
