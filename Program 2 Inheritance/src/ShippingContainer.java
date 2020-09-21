@@ -126,4 +126,7 @@ public class ShippingContainer {
         System.out.println("Total number of luggage: " + container.size() + ", Total volume: " + Math.round((vol) * 100.0)/100.0);
         System.out.println();
     }
+    public int size(){
+        return container.size();
+    }
 }
