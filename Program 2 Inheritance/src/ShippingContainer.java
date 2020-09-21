@@ -99,15 +99,20 @@ public class ShippingContainer {
         }
     }
     public void remove(int x){
-        x = x -1;
+        int y = x -1;
         if(container.size() == 0){
             System.out.println("There are no more luggage items.");
         }
-        else if(container.size() > 0 && x < container.size() && x > 0){
-            container.remove(x);
-        }
-        else if(x > container.size() || x <= 0){
+        else if(x > container.size() || y < 0 || container.size() == 0){
             System.out.println("Not a valid removal.");
+        }
+        else if(container.size() > 0 && y < container.size() && y > 0){
+            System.out.println("Removed " + container.get(y));
+            container.remove(y);
+        }
+        else if(y == 0 || container.size() == 1){
+            container = new ArrayList<>();
+            System.out.println("There are no more luggage items.");
         }
     }
     public void display(){
