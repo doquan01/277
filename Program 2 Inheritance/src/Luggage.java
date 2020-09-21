@@ -19,4 +19,7 @@ abstract class Luggage implements Comparable{
             return 0;
         }
     }
+    public float getVolume(){
+        return volume;
+    }
 }

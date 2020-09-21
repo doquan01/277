@@ -112,10 +112,13 @@ public class ShippingContainer {
     }
     public void display(){
         int x = 1;
+        float vol = 0;
         for(int i = 0; i < container.size(); i++){
             System.out.print(x++ + ") ");
             System.out.println(container.get(i).toString());
+            vol += container.get(i).getVolume();
         }
+        System.out.println("Total number of luggage: " + container.size() + ", Total volume: " + Math.round((vol) * 100.0)/100.0);
         System.out.println();
     }
 }
