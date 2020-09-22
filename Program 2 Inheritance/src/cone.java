@@ -7,6 +7,6 @@ public class cone extends Luggage {
         this.height = height;
     }
     public String toString() {
-        return "Cone, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Radius: " + radius + ", Height: " + height;
+        return "Cone, Volume: " + Math.round(getVolume() * 100.0)/100.0 + " units cubed" + ", Radius: " + radius + ", Height: " + height;
     }
 }

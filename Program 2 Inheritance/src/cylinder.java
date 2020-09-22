@@ -7,6 +7,6 @@ public class cylinder extends Luggage {
         this.length = length;
     }
     public String toString(){
-        return "Cylinder, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Radius: " + radius + ", Length: " + length;
+        return "Cylinder, Volume: " + Math.round(getVolume() * 100.0)/100.0 + " units cubed" + ", Radius: " + radius + ", Length: " + length;
     }
 }

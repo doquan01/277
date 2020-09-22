@@ -5,6 +5,6 @@ public class sphere extends Luggage {
         this.radius = radius;
     }
     public String toString(){
-        return "Sphere, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Radius: " + radius;
+        return "Sphere, Volume: " + Math.round(getVolume() * 100.0)/100.0 + " units cubed" + ", Radius: " + radius;
     }
 }

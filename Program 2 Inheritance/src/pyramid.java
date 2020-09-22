@@ -7,6 +7,6 @@ public class pyramid extends Luggage {
         this.height = height;
     }
     public String toString(){
-        return "Pyramid, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Base Length: " + base + ", Height: " + height;
+        return "Pyramid, Volume: " + Math.round(getVolume() * 100.0)/100.0 + " units cubed" + ", Base Length: " + base + ", Height: " + height;
     }
 }

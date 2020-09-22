@@ -5,6 +5,6 @@ public class cube extends Luggage {
         this.width = width;
     }
     public String toString(){
-        return "Cube, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Width: " + width;
+        return "Cube, Volume: " + Math.round(getVolume() * 100.0)/100.0 + " units cubed" + ", Width: " + width;
     }
 }

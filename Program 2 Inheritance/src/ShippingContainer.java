@@ -16,8 +16,20 @@ public class ShippingContainer {
         container.add(new triangularPrism(4,6,8));
         container.add(new box(5,7,8));
         container.add(new cone(6, 5));
+//        sortArray();
         Collections.sort(container);
     }
+//    public void sortArray() {
+//        for (int i = 0; i < container.size(); i++) {
+//            for (int j = container.size() - 1; j > i; j--) {
+//                if (container.get(i).compareTo(container.get(j)) == 1) {
+//                    Luggage temp = container.get(i);
+//                    container.set(i, container.get(j));
+//                    container.set(j, temp);
+//                }
+//            }
+//        }
+//    }
     public void add(int x){
         Scanner scan = new Scanner(System.in);
         if(x == 1){
@@ -28,18 +40,21 @@ public class ShippingContainer {
             System.out.println("Enter the height of the box");
             int h = scan.nextInt();
             container.add(new box(l,w,h));
+//            sortArray();
             Collections.sort(container);
         }
         else if(x == 2){
             System.out.println("Enter the radius of the sphere.");
             int r = scan.nextInt();
             container.add(new sphere(r));
+//            sortArray();
             Collections.sort(container);
         }
         else if(x == 3){
             System.out.println("Enter the width of the cube");
             int w = scan.nextInt();
             container.add(new cube(w));
+//            sortArray();
             Collections.sort(container);
         }
         else if(x == 4){
@@ -48,6 +63,7 @@ public class ShippingContainer {
             System.out.println("Enter the height of the pyramid");
             int h = scan.nextInt();
             container.add(new pyramid(b, h));
+//            sortArray();
             Collections.sort(container);
         }
         else if(x == 5){
@@ -56,6 +72,7 @@ public class ShippingContainer {
             System.out.println("Enter the length of the cylinder");
             int l = scan.nextInt();
             container.add(new cylinder(r,l));
+//            sortArray();
             Collections.sort(container);
         }
         else if(x == 6){
@@ -64,6 +81,7 @@ public class ShippingContainer {
             System.out.println("Enter the height of the cone");
             int h = scan.nextInt();
             container.add(new cone(r, h));
+//            sortArray();
             Collections.sort(container);
         }
         else if(x == 7){
@@ -74,6 +92,7 @@ public class ShippingContainer {
             System.out.println("Enter the length of the triangular prism");
             int l = scan.nextInt();
             container.add(new triangularPrism(w,h,l));
+//            sortArray();
             Collections.sort(container);
         }
         else if(x == 8){
@@ -82,6 +101,7 @@ public class ShippingContainer {
             System.out.println("Enter the height of the hexagonal prism");
             int h = scan.nextInt();
             container.add(new hexagonalPrism(e,h));
+//            sortArray();
             Collections.sort(container);
         }
         else{
@@ -113,7 +133,7 @@ public class ShippingContainer {
             System.out.println(container.get(i).toString());
             vol += container.get(i).getVolume();
         }
-        System.out.println("Total number of luggage: " + container.size() + ", Total volume: " + Math.round(vol * 100.0)/100.0);
+        System.out.println("Total number of luggage: " + container.size() + ", Total volume: " + Math.round(vol * 100.0)/100.0 + " units cubed");
         System.out.println();
     }
     public int size(){

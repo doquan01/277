@@ -7,6 +7,6 @@ public class hexagonalPrism extends Luggage{
         this.height = height;
     }
     public String toString(){
-        return "Hexagonal Prism, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Edge: " + edge + ", Height: " + height;
+        return "Hexagonal Prism, Volume: " + Math.round(getVolume() * 100.0)/100.0 + " units cubed" + ", Edge: " + edge + ", Height: " + height;
     }
 }

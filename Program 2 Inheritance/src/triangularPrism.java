@@ -9,6 +9,6 @@ public class triangularPrism extends Luggage {
         this.length = length;
     }
     public String toString(){
-        return "Triangular Prism, Volume: " + Math.round(getVolume() * 100.0)/100.0 + ", Width: " + width + ", Height: " + height + ", Length: " + length;
+        return "Triangular Prism, Volume: " + Math.round(getVolume() * 100.0)/100.0 + " units cubed" + ", Width: " + width + ", Height: " + height + ", Length: " + length;
     }
 }
