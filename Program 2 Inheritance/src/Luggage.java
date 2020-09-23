@@ -1,6 +1,6 @@
 abstract class Luggage implements Comparable{
-    float volume;
-    String type;
+    private float volume;
+    private String type;
 
     public Luggage(float volume, String type){
         this.volume = volume;
