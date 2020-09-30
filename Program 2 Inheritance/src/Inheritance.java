@@ -1,3 +1,11 @@
+/*Quan Do
+  CECS 277-01
+  CSULBProgram #2 – Inheritance/Polymorphism/Interface
+  9/22/2020
+
+  I certify that this program is my is my own work. I did not copy any part of this program from
+  any other source. I further certify that I typed each and every line of code in this program.
+*/
 import java.util.Scanner;
 
 public class Inheritance {
@@ -9,6 +17,7 @@ public class Inheritance {
             input = menu();
             if(input == 1){
                 storage = new ShippingContainer();
+                System.out.println("New shipping container created");
             }
             else if(input == 2){
                 System.out.println("Luggage options: \n1) box\n2) sphere\n3) cube\n4) pyramid\n5) cylinder\n" +

@@ -19,6 +19,9 @@ abstract class Luggage implements Comparable{
             return 0;
         }
     }
+    public String toString(){
+        return "Type: " + type + ", Volume: " + volume;
+    }
     public float getVolume(){
         return volume;
     }
