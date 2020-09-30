@@ -7,7 +7,7 @@ public class Card {
         suit = s;
     }
     public void display(){
-        if(rank.equals('T')){
+        if(rank.getRank() == 'T'){
             System.out.printf("10%s", suit.getSuit());
         }
         else{

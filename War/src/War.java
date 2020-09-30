@@ -19,9 +19,12 @@ public class War {
             input = menu();
             if (input == 1){
                 d = new Deck();
+                player1 = new Hand(d);
+                player2 = new Hand(d);
                 System.out.println("New deck created");
             }
             else if (input == 2){
+                d = new Deck();
                 d.shuffle();
                 player1 = new Hand(d);
                 player2 = new Hand(d);
@@ -35,8 +38,7 @@ public class War {
 
             }
             else if (input == 4){
-                player1.display();
-                player2.display();
+                playWar(player1, player2);
             }
             else if (input == 5){
                 System.out.println("Exiting the game, bye.");
@@ -55,12 +57,23 @@ public class War {
         int x = scan.nextInt();
         return x;
     }
-    public static void playWar(){
+    public static void playWar(Hand p1, Hand p2){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the max battle number");
         int counter = scan.nextInt();
-        while(counter != 0){
-
+        Deck s = new Deck();
+        s.shuffle();
+        p1 = new Hand(s);
+        p2 = new Hand(s);
+        System.out.println("Player 1 cards: ");
+        p1.display();
+        System.out.println("Player 2 cards: ");
+        p2.display();
+        System.out.println("Press any key to continue");
+        if(scan.hasNext()) {
+            while (counter != 0 || p1.cardsLeft() != 0 || p2.cardsLeft() != 0) {
+                
+            }
         }
     }
 }

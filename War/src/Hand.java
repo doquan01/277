@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Hand extends Deck {
     private ArrayList<Card> player;
+    private int counter = 0;
     public Hand(Deck d){
         ArrayList<Card> p = new ArrayList<>();
         this.player = p;
@@ -18,5 +19,11 @@ public class Hand extends Deck {
             System.out.print(", ");
         }
         System.out.println();
+    }
+    public Card deal(){
+        return player.get(counter++);
+    }
+    public int cardsLeft(){
+        return player.size() - counter;
     }
 }

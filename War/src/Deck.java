@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Deck {
     private ArrayList<Card> storage;
-    private int counter;
+    private int counter = 0;
     enum Suit{
         H('H'), D('D'), S('S'), C('C');
         private char suit;
@@ -27,7 +27,6 @@ public class Deck {
     }
     public Deck()
     {
-        int counter = 0;
         storage = new ArrayList<>();
         Card C1;
         for (Suit suit : Suit.values())
@@ -47,7 +46,7 @@ public class Deck {
         }
         System.out.print("\n\n");
     }
-    public void shuffle(){ //Fix
+    public void shuffle(){
         Random rand = new Random();
 
         for(int i = 0; i < 52; i++){
@@ -62,6 +61,6 @@ public class Deck {
             return storage.get(counter++);
     }
     public int cardsLeft(){
-        return 52 - counter;
+        return storage.size() - counter;
     }
 }
