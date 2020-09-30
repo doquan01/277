@@ -47,7 +47,7 @@ public class Deck {
         }
         System.out.print("\n\n");
     }
-    public void shuffle(){
+    public void shuffle(){ //Fix
         Random rand = new Random();
 
         for(int i = 0; i < 52; i++){
@@ -59,7 +59,7 @@ public class Deck {
         }
     }
     public Card deal(){
-        return storage.get(counter++);
+            return storage.get(counter++);
     }
     public int cardsLeft(){
         return 52 - counter;
