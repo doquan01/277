@@ -8,10 +8,10 @@ public class Card {
     }
     public void display(){
         if(rank.equals('T')){
-            System.out.printf("10%s", suit);
+            System.out.printf("10%s", suit.getSuit());
         }
         else{
-            System.out.printf("%s%s", rank.getRank(), suit);
+            System.out.printf("%s%s", rank.getRank(), suit.getSuit());
         }
     }
     public int getValue() {
