@@ -8,14 +8,13 @@ public class Card {
     }
     public void display(){
         if(rank.getRank() == 'T'){
-            System.out.printf("10%s", suit.getSuit());
+            System.out.printf("10%s", suit);
         }
         else{
-            System.out.printf("%s%s", rank.getRank(), suit.getSuit());
+            System.out.printf("%s%s", rank.getRank(), suit);
         }
     }
     public int getValue() {
-        Card c = new Card(rank,suit);
         if (rank.getRank() == 'A') {
             return 1;
         }

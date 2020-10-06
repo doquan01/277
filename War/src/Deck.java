@@ -4,21 +4,14 @@ import java.util.ArrayList;
 public class Deck {
     private ArrayList<Card> storage;
     private int counter = 0;
-    enum Suit{
-        H('H'), D('D'), S('S'), C('C');
-        private char suit;
-        private Suit(char s){
-            this.suit = s;
-        }
-        public char getSuit(){
-            return this.suit;
-        }
+    public enum Suit{
+        H, D, S, C;
     }
-    enum Rank{
-        A('A'), x2('2'), x3('3'), x4('4'), x5('5'), x6('6'), x7('7'), x8('8'),
-        x9('9'), T('T'), J('J'), Q('Q'), K('K');
+    public enum Rank{
+        A('A'), Two('2'), Three('3'), Four('4'), Five('5'), Six('6'), Seven('7'), Eight('8'),
+        Nine('9'), Ten('T'), Jack('J'), Queen('Q'), King('K');
         private char rank;
-        private Rank(char r){
+        Rank(char r){
             this.rank = r;
         }
         public char getRank(){

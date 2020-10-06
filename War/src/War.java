@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
 /*Quan Do
   CECS 277-01
   War
@@ -9,6 +6,10 @@ import java.util.Scanner;
   I certify that this program is my is my own work. I did not copy any part of this program from
   any other source. I further certify that I typed each and every line of code in this program.
 */
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class War {
     public static void main(String[] args) {
 
@@ -113,12 +114,12 @@ public class War {
             if(p1.cardsLeft() > p2.cardsLeft() || p2.cardsLeft() == 0){
                 System.out.println("Player 1 wins the game");
                 System.out.println("Player 1 cards left: " + p1.cardsLeft());
-                System.out.println("Player 1 cards left: " + p2.cardsLeft());
+                System.out.println("Player 2 cards left: " + p2.cardsLeft());
             }
             else if(p1.cardsLeft() < p2.cardsLeft() || p1.cardsLeft() == 0){
                 System.out.println("Player 2 wins the game");
                 System.out.println("Player 1 cards left: " + p1.cardsLeft());
-                System.out.println("Player 1 cards left: " + p2.cardsLeft());
+                System.out.println("Player 2 cards left: " + p2.cardsLeft());
             }
             else{
                 System.out.println("Tie game");
