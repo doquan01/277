@@ -111,14 +111,22 @@ public class War {
 
                 }
             }
-            if(p1.cardsLeft() > p2.cardsLeft() || p2.cardsLeft() == 0){
+            if(p2.cardsLeft() == 0){
                 System.out.println("Player 1 wins the game");
                 System.out.println("Player 1 cards left: " + p1.cardsLeft());
                 System.out.println("Player 2 cards left: " + p2.cardsLeft());
             }
-            else if(p1.cardsLeft() < p2.cardsLeft() || p1.cardsLeft() == 0){
+            else if(p1.cardsLeft() == 0){
                 System.out.println("Player 2 wins the game");
                 System.out.println("Player 1 cards left: " + p1.cardsLeft());
+                System.out.println("Player 2 cards left: " + p2.cardsLeft());
+            }
+            else if(p1.cardsLeft() != 0 && p2.cardsLeft() != 0){
+                System.out.println("Player 1 cards ");
+                p1.display();
+                System.out.println("Player 1 cards left: " + p1.cardsLeft());
+                System.out.println("Player 2 cards ");
+                p2.display();
                 System.out.println("Player 2 cards left: " + p2.cardsLeft());
             }
             else{
