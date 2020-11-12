@@ -1,0 +1,10 @@
+By analyzing the time it took to run each part of the program, in part 1 the
+TreeMap is more efficient for loading data and for printing data, in part 2 the
+TreeSet is more efficient for inserting data and the HashSet is more efficient
+for searching data, and in part 3 the HashMap is created more efficiently and
+more efficient for counting and totaling the scores. Based on observation, I saw
+is that when scanning a small set of data it is best to use the TreeMap over the HashMap, but
+when scanning a large set of data the HashMap is better suited for the task. Since
+part 3 is supposed to work with the data collected from part 2, and I seen that HashSet
+is faster in searching data, it probably worked in favor for part 3's HashMap in its creation
+time.

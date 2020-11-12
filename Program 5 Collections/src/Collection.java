@@ -17,12 +17,15 @@ public class Collection {
         Scanner scHash = new Scanner(qW);
         HashMap<String, Integer> testHashMap = new HashMap<>();
         long time1, time2;
+
+        //Part 1
         time1 = System.nanoTime();
         while(scHash.hasNextLine()){
             testHashMap.put(scHash.next(), 0);
         }
         time2 = System.nanoTime();
         System.out.println("Time for loading into HashMap " + (time2 - time1) + " nano-seconds");
+
         for(String i : testHashMap.keySet()){
             String temp = i;
             int score = 0;
@@ -78,7 +81,7 @@ public class Collection {
             testTreeMap.put(scTree.next(), 0);
         }
         time2 = System.nanoTime();
-        System.out.println("Time for loading into HashMap " + (time2 - time1) + " nano-seconds");
+        System.out.println("Time for loading into TreeMap " + (time2 - time1) + " nano-seconds");
         for(String i : testTreeMap.keySet()){
             String temp = i;
             int score = 0;
@@ -122,7 +125,11 @@ public class Collection {
         System.out.print("Press any key to continue . . . ");
         cont = scan.nextLine();
         System.out.println();
+        //TreeMap is more efficient for loading data and for printing data
 
+
+
+        //Part 2
         File alice = new File("Alice.txt");
         System.out.println("Using HashSet");
         Scanner scHashSet = new Scanner(alice);
@@ -159,6 +166,7 @@ public class Collection {
         cont = scan.nextLine();
         System.out.println();
 
+
         System.out.println("Using TreeSet");
         Scanner scTreeSet = new Scanner(alice);
 
@@ -193,7 +201,10 @@ public class Collection {
         System.out.print("Press any key to continue . . . ");
         cont = scan.nextLine();
         System.out.println();
+        /*TreeSet is more efficient for inserting data and the HashSet is more efficient for searching data*/
 
+
+        //Part 3
         time1 = System.nanoTime();
         HashMap<String, Integer> part3Hash = new HashMap<>();
         hashSetitr = testHashSet.iterator();
@@ -301,6 +312,19 @@ public class Collection {
         }
         time2 =System.nanoTime();
         System.out.println("Time for counting and totaling scores of Tree Map: " + (time2 - time1) + " nano-seconds");
+        //The HashMap is created more efficiently and more efficient for counting and totaling the scores
 
+        /*
+        By analyzing the time it took to run each part of the program, in part 1 the
+        TreeMap is more efficient for loading data and for printing data, in part 2 the
+        TreeSet is more efficient for inserting data and the HashSet is more efficient
+        for searching data, and in part 3 the HashMap is created more efficiently and
+        more efficient for counting and totaling the scores. My assumption is that when
+        scanning a small set of data it is best to use the TreeMap over the HashMap, but
+        when scanning a large set of data the HashMap is better suited for the task. Since
+        part 3 is supposed to work with the data collected from part 2, and I seen that HashSet
+        is faster in searching data, it probably worked in favor for part 3's HashMap in its creation
+        time.
+        */
     }
 }
