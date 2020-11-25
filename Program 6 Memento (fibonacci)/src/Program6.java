@@ -20,8 +20,6 @@ public class Program6 {
         for(int i = 0; i < 1001; i++){
             start = System.nanoTime();
             f = fibo(new BigInteger(Integer.toString(i)));
-            origin.setState(f);
-            care.add(origin.saveStateToMemento());
             end = System.nanoTime();
             dur = (end - start) / 1000.0;
             System.out.printf("Fibo(%d): %12d (Nano Secs: %5.3f)\n", i, f, dur);
@@ -31,16 +29,15 @@ public class Program6 {
         BigInteger zero = new BigInteger("0");
         BigInteger one = new BigInteger("1");
         BigInteger two = new BigInteger("2");
-        if(care.getSize()<2){
-            if (n.equals(zero) || n.equals(one)){
-                return one;
-            }
-            else {
-                return (fibo(n.subtract(one))).add(fibo(n.subtract(two)));
-            }
+        if (n.equals(zero) || n.equals(one)){
+            origin.setState(one);
+            care.add(origin.saveStateToMemento());
+            return origin.getState();
         }
-        else{
-            return care.get(care.getSize()-1).getState().add(care.get(care.getSize()-2).getState());
+        else {
+            origin.setState(care.get(n.subtract(one).intValue()).getState().add(care.get(n.subtract(two).intValue()).getState()));
+            care.add(origin.saveStateToMemento());
+            return origin.getState();
         }
     }
 }
